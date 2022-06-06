@@ -4,13 +4,14 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import kotlinx.android.synthetic.main.activity_mainpage.*
 
 class MainPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mainpage)
-
+Log.d("taga", "mainpage")
         //MyTeam 버튼
         btnMyTeam.setOnClickListener {
             val intent = Intent(this, MyTeam::class.java)
