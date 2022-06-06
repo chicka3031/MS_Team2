@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MS_Team2</string>
+    <string name="text1">입축구</string>
+    <string name="text2">Touch the Screen</string>
+    <string name="mainImg">TODO</string>
+    <string name="touch_the_button">Touch the Button</string>
+</resources>
