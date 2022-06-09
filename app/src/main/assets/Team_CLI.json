@@ -1,0 +1,642 @@
+{
+  "filters": {
+    "season": "2022"
+  },
+  "area": {
+    "id": 2220,
+    "name": "South America",
+    "code": "SAM",
+    "flag": null
+  },
+  "competition": {
+    "id": 2152,
+    "name": "Copa Libertadores",
+    "code": "CLI",
+    "type": "CUP",
+    "emblem": "https://crests.football-data.org/CLI.svg"
+  },
+  "season": {
+    "id": 873,
+    "startDate": "2022-02-09",
+    "endDate": "2022-05-27",
+    "currentMatchday": 6,
+    "winner": null
+  },
+  "standings": [{
+    "stage": "GROUP_STAGE",
+    "type": "TOTAL",
+    "group": "GROUP_A",
+    "table": [{
+      "position": 1,
+      "team": {
+        "id": 1769,
+        "name": "SE Palmeiras",
+        "shortName": "Palmeiras",
+        "tla": "PAL",
+        "crest": "https://crests.football-data.org/1769.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 5,
+      "draw": 0,
+      "lost": 0,
+      "points": 15,
+      "goalsFor": 21,
+      "goalsAgainst": 2,
+      "goalDifference": 19
+    }, {
+      "position": 2,
+      "team": {
+        "id": 5171,
+        "name": "Deportivo Táchira FC",
+        "shortName": "Táchira",
+        "tla": "TÁC",
+        "crest": "https://crests.football-data.org/5171.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 2,
+      "draw": 1,
+      "lost": 2,
+      "points": 7,
+      "goalsFor": 7,
+      "goalsAgainst": 10,
+      "goalDifference": -3
+    }, {
+      "position": 3,
+      "team": {
+        "id": 4523,
+        "name": "CS Emelec",
+        "shortName": "CS Emelec",
+        "tla": "EME",
+        "crest": "https://crests.football-data.org/4523.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 1,
+      "draw": 2,
+      "lost": 2,
+      "points": 5,
+      "goalsFor": 7,
+      "goalsAgainst": 7,
+      "goalDifference": 0
+    }, {
+      "position": 4,
+      "team": {
+        "id": 9340,
+        "name": "Club Independiente Petrolero",
+        "shortName": "CI Petrolero",
+        "tla": "CIP",
+        "crest": "https://crests.football-data.org/9340.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 0,
+      "draw": 1,
+      "lost": 4,
+      "points": 1,
+      "goalsFor": 3,
+      "goalsAgainst": 19,
+      "goalDifference": -16
+    }]
+  }, {
+    "stage": "GROUP_STAGE",
+    "type": "TOTAL",
+    "group": "GROUP_B",
+    "table": [{
+      "position": 1,
+      "team": {
+        "id": 9379,
+        "name": "Club Libertad Asuncion",
+        "shortName": "Libertad",
+        "tla": "CLA",
+        "crest": "https://crests.football-data.org/9379.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 2,
+      "draw": 1,
+      "lost": 2,
+      "points": 7,
+      "goalsFor": 4,
+      "goalsAgainst": 5,
+      "goalDifference": -1
+    }, {
+      "position": 2,
+      "team": {
+        "id": 1768,
+        "name": "CA Paranaense",
+        "shortName": "Paranaense",
+        "tla": "CAP",
+        "crest": "https://crests.football-data.org/1768.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 2,
+      "draw": 1,
+      "lost": 2,
+      "points": 7,
+      "goalsFor": 3,
+      "goalsAgainst": 6,
+      "goalDifference": -3
+    }, {
+      "position": 3,
+      "team": {
+        "id": 4267,
+        "name": "Club The Strongest",
+        "shortName": "The Strongest",
+        "tla": "STR",
+        "crest": "https://crests.football-data.org/4267.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 1,
+      "draw": 3,
+      "lost": 1,
+      "points": 6,
+      "goalsFor": 7,
+      "goalsAgainst": 3,
+      "goalDifference": 4
+    }, {
+      "position": 4,
+      "team": {
+        "id": 5167,
+        "name": "Caracas FC",
+        "shortName": "Caracas FC",
+        "tla": "CAR",
+        "crest": "https://crests.football-data.org/5167.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 1,
+      "draw": 3,
+      "lost": 1,
+      "points": 6,
+      "goalsFor": 3,
+      "goalsAgainst": 3,
+      "goalDifference": 0
+    }]
+  }, {
+    "stage": "GROUP_STAGE",
+    "type": "TOTAL",
+    "group": "GROUP_C",
+    "table": [{
+      "position": 1,
+      "team": {
+        "id": 2051,
+        "name": "Estudiantes de La Plata",
+        "shortName": "Estudiantes LP",
+        "tla": "EST",
+        "crest": "https://crests.football-data.org/2051.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 4,
+      "draw": 1,
+      "lost": 0,
+      "points": 13,
+      "goalsFor": 8,
+      "goalsAgainst": 1,
+      "goalDifference": 7
+    }, {
+      "position": 2,
+      "team": {
+        "id": 4286,
+        "name": "RB Bragantino",
+        "shortName": "Bragantino",
+        "tla": "RBB",
+        "crest": "https://crests.football-data.org/4286.svg"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 1,
+      "draw": 2,
+      "lost": 2,
+      "points": 5,
+      "goalsFor": 5,
+      "goalsAgainst": 6,
+      "goalDifference": -1
+    }, {
+      "position": 3,
+      "team": {
+        "id": 2078,
+        "name": "CA Vélez Sarsfield",
+        "shortName": "Vélez",
+        "tla": "VÉL",
+        "crest": "https://crests.football-data.org/2078.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 1,
+      "draw": 2,
+      "lost": 2,
+      "points": 5,
+      "goalsFor": 8,
+      "goalsAgainst": 11,
+      "goalDifference": -3
+    }, {
+      "position": 4,
+      "team": {
+        "id": 7055,
+        "name": "Club Nacional de Football",
+        "shortName": "Club Nacional",
+        "tla": "NAC",
+        "crest": "https://crests.football-data.org/7055.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 1,
+      "draw": 1,
+      "lost": 3,
+      "points": 4,
+      "goalsFor": 4,
+      "goalsAgainst": 7,
+      "goalDifference": -3
+    }]
+  }, {
+    "stage": "GROUP_STAGE",
+    "type": "TOTAL",
+    "group": "GROUP_D",
+    "table": [{
+      "position": 1,
+      "team": {
+        "id": 1766,
+        "name": "CA Mineiro",
+        "shortName": "Mineiro",
+        "tla": "CAM",
+        "crest": "https://crests.football-data.org/1766.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 3,
+      "draw": 2,
+      "lost": 0,
+      "points": 11,
+      "goalsFor": 9,
+      "goalsAgainst": 4,
+      "goalDifference": 5
+    }, {
+      "position": 2,
+      "team": {
+        "id": 4437,
+        "name": "CD Tolima",
+        "shortName": "Tolima",
+        "tla": "TOL",
+        "crest": "https://crests.football-data.org/4437.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 2,
+      "draw": 2,
+      "lost": 1,
+      "points": 8,
+      "goalsFor": 8,
+      "goalsAgainst": 8,
+      "goalDifference": 0
+    }, {
+      "position": 3,
+      "team": {
+        "id": 6989,
+        "name": "CAR Independiente del Valle",
+        "shortName": "Independiente",
+        "tla": "IDL",
+        "crest": "https://crests.football-data.org/6989.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 1,
+      "draw": 2,
+      "lost": 2,
+      "points": 5,
+      "goalsFor": 6,
+      "goalsAgainst": 7,
+      "goalDifference": -1
+    }, {
+      "position": 4,
+      "team": {
+        "id": 1838,
+        "name": "América FC",
+        "shortName": "América (MG)",
+        "tla": "AMÉ",
+        "crest": "https://crests.football-data.org/1838.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 0,
+      "draw": 2,
+      "lost": 3,
+      "points": 2,
+      "goalsFor": 6,
+      "goalsAgainst": 10,
+      "goalDifference": -4
+    }]
+  }, {
+    "stage": "GROUP_STAGE",
+    "type": "TOTAL",
+    "group": "GROUP_E",
+    "table": [{
+      "position": 1,
+      "team": {
+        "id": 4427,
+        "name": "AD Cali",
+        "shortName": "AD Cali",
+        "tla": "CAL",
+        "crest": "https://crests.football-data.org/4427.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 2,
+      "draw": 2,
+      "lost": 1,
+      "points": 8,
+      "goalsFor": 7,
+      "goalsAgainst": 3,
+      "goalDifference": 4
+    }, {
+      "position": 2,
+      "team": {
+        "id": 1779,
+        "name": "SC Corinthians Paulista",
+        "shortName": "Corinthians",
+        "tla": "COR",
+        "crest": "https://crests.football-data.org/1779.svg"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 2,
+      "draw": 2,
+      "lost": 1,
+      "points": 8,
+      "goalsFor": 4,
+      "goalsAgainst": 3,
+      "goalDifference": 1
+    }, {
+      "position": 3,
+      "team": {
+        "id": 2061,
+        "name": "CA Boca Juniors",
+        "shortName": "Boca Juniors",
+        "tla": "BOC",
+        "crest": "https://crests.football-data.org/2061.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 2,
+      "draw": 1,
+      "lost": 2,
+      "points": 7,
+      "goalsFor": 4,
+      "goalsAgainst": 5,
+      "goalDifference": -1
+    }, {
+      "position": 4,
+      "team": {
+        "id": 7865,
+        "name": "Club Always Ready",
+        "shortName": "Always Ready",
+        "tla": "",
+        "crest": "https://crests.football-data.org/7865.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 1,
+      "draw": 1,
+      "lost": 3,
+      "points": 4,
+      "goalsFor": 4,
+      "goalsAgainst": 8,
+      "goalDifference": -4
+    }]
+  }, {
+    "stage": "GROUP_STAGE",
+    "type": "TOTAL",
+    "group": "GROUP_F",
+    "table": [{
+      "position": 1,
+      "team": {
+        "id": 6667,
+        "name": "CA River Plate",
+        "shortName": "River Plate",
+        "tla": "RIV",
+        "crest": "https://crests.football-data.org/6667.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 4,
+      "draw": 1,
+      "lost": 0,
+      "points": 13,
+      "goalsFor": 10,
+      "goalsAgainst": 2,
+      "goalDifference": 8
+    }, {
+      "position": 2,
+      "team": {
+        "id": 3984,
+        "name": "Fortaleza EC",
+        "shortName": "Fortaleza",
+        "tla": "FEC",
+        "crest": "https://crests.football-data.org/3984.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 2,
+      "draw": 1,
+      "lost": 2,
+      "points": 7,
+      "goalsFor": 6,
+      "goalsAgainst": 6,
+      "goalDifference": 0
+    }, {
+      "position": 3,
+      "team": {
+        "id": 4410,
+        "name": "CSD Colo-Colo",
+        "shortName": "Colo-Colo",
+        "tla": "COL",
+        "crest": "https://crests.football-data.org/4410.svg"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 2,
+      "draw": 1,
+      "lost": 2,
+      "points": 7,
+      "goalsFor": 6,
+      "goalsAgainst": 9,
+      "goalDifference": -3
+    }, {
+      "position": 4,
+      "team": {
+        "id": 5680,
+        "name": "Club Alianza Lima",
+        "shortName": "Alianza Lima",
+        "tla": "ALI",
+        "crest": "https://crests.football-data.org/5680.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 0,
+      "draw": 1,
+      "lost": 4,
+      "points": 1,
+      "goalsFor": 3,
+      "goalsAgainst": 8,
+      "goalDifference": -5
+    }]
+  }, {
+    "stage": "GROUP_STAGE",
+    "type": "TOTAL",
+    "group": "GROUP_G",
+    "table": [{
+      "position": 1,
+      "team": {
+        "id": 2063,
+        "name": "CA Colón",
+        "shortName": "Colón",
+        "tla": "COL",
+        "crest": "https://crests.football-data.org/2063.svg"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 3,
+      "draw": 1,
+      "lost": 1,
+      "points": 10,
+      "goalsFor": 7,
+      "goalsAgainst": 6,
+      "goalDifference": 1
+    }, {
+      "position": 2,
+      "team": {
+        "id": 9373,
+        "name": "Club Cerro Porteño",
+        "shortName": "Cerro Porteño",
+        "tla": "CCP",
+        "crest": "https://crests.football-data.org/9373.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 2,
+      "draw": 2,
+      "lost": 1,
+      "points": 8,
+      "goalsFor": 5,
+      "goalsAgainst": 3,
+      "goalDifference": 2
+    }, {
+      "position": 3,
+      "team": {
+        "id": 9372,
+        "name": "Olimpia Asuncion",
+        "shortName": "Olimpia",
+        "tla": "OLI",
+        "crest": "https://crests.football-data.org/9372.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 1,
+      "draw": 2,
+      "lost": 2,
+      "points": 5,
+      "goalsFor": 3,
+      "goalsAgainst": 4,
+      "goalDifference": -1
+    }, {
+      "position": 4,
+      "team": {
+        "id": 5184,
+        "name": "CA Peñarol",
+        "shortName": "Peñarol",
+        "tla": "PEN",
+        "crest": "https://crests.football-data.org/5184.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 1,
+      "draw": 1,
+      "lost": 3,
+      "points": 4,
+      "goalsFor": 3,
+      "goalsAgainst": 5,
+      "goalDifference": -2
+    }]
+  }, {
+    "stage": "GROUP_STAGE",
+    "type": "TOTAL",
+    "group": "GROUP_H",
+    "table": [{
+      "position": 1,
+      "team": {
+        "id": 1783,
+        "name": "CR Flamengo",
+        "shortName": "Flamengo",
+        "tla": "FLA",
+        "crest": "https://crests.football-data.org/1783.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 4,
+      "draw": 1,
+      "lost": 0,
+      "points": 13,
+      "goalsFor": 13,
+      "goalsAgainst": 5,
+      "goalDifference": 8
+    }, {
+      "position": 2,
+      "team": {
+        "id": 2073,
+        "name": "CA Talleres",
+        "shortName": "Talleres",
+        "tla": "TAL",
+        "crest": "https://crests.football-data.org/2073.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 2,
+      "draw": 2,
+      "lost": 1,
+      "points": 8,
+      "goalsFor": 5,
+      "goalsAgainst": 5,
+      "goalDifference": 0
+    }, {
+      "position": 3,
+      "team": {
+        "id": 6993,
+        "name": "CD Universidad Católica",
+        "shortName": "Univ Católica",
+        "tla": "CAT",
+        "crest": "https://crests.football-data.org/6993.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 1,
+      "draw": 1,
+      "lost": 3,
+      "points": 4,
+      "goalsFor": 5,
+      "goalsAgainst": 9,
+      "goalDifference": -4
+    }, {
+      "position": 4,
+      "team": {
+        "id": 5347,
+        "name": "CS Cristal",
+        "shortName": "Cristal",
+        "tla": "SPO",
+        "crest": "https://crests.football-data.org/5347.png"
+      },
+      "playedGames": 5,
+      "form": null,
+      "won": 0,
+      "draw": 2,
+      "lost": 3,
+      "points": 2,
+      "goalsFor": 2,
+      "goalsAgainst": 6,
+      "goalDifference": -4
+    }]
+  }]
+}
