@@ -12,8 +12,7 @@ class Predict : AppCompatActivity() {
 
         //Back 버튼
         btnBack.setOnClickListener {
-            val intent = Intent(this, MainPage::class.java)
-            startActivity(intent)
+            finish()
         }
     }
 }

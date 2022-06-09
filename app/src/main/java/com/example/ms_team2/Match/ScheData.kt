@@ -1,5 +1,7 @@
 package com.example.ms_team2.Match
 
+import java.io.Serializable
+
 data class ScheData(
                     var hometeam: String,
                     var hometeamimg: String,
