@@ -3,6 +3,7 @@ package com.example.ms_team2.Match
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ms_team2.Team.MyDBHelper
 import com.example.ms_team2.Team.MyTeamData
@@ -26,8 +27,6 @@ class MatchListMyTeam : AppCompatActivity() {
         setContentView(binding.root)
 
         init()  //db가져오기
-        initrecycler_myteam()
-        initrecycler_match()
 
     }
 
@@ -42,16 +41,29 @@ class MatchListMyTeam : AppCompatActivity() {
         val db = myDBHelper.readableDatabase
         val cursor = db.rawQuery(strsql, null)
         cursor.moveToFirst()
-        do {
-            Log.d("dbcursor", cursor.getString(1))
-            Log.d("dbcursor", cursor.getString(2))
 
-            MyTeam_League.add(cursor.getString(1))  //리그 추가
-            MyTeam_Name.add(cursor.getString(2))    //팀이름 추가
+        if(cursor.count!=0){
+            do {
+                Log.d("dbcursor", cursor.getString(1))
+                Log.d("dbcursor", cursor.getString(2))
 
-        }while(cursor.moveToNext())
-        cursor.close()
-        db.close()
+                MyTeam_League.add(cursor.getString(1))  //리그 추가
+                MyTeam_Name.add(cursor.getString(2))    //팀이름 추가
+
+            }while(cursor.moveToNext())
+            cursor.close()
+            db.close()
+
+            initrecycler_myteam()
+            initrecycler_match()
+        }else{
+            Toast.makeText(this, "즐겨찾기 팀이 없습니다", Toast.LENGTH_LONG).show()
+        }
+
+
+
+
+
     }
 
     fun initrecycler_myteam() {
@@ -76,7 +88,6 @@ class MatchListMyTeam : AppCompatActivity() {
                 val teamimg = team_array.getJSONObject(j).getJSONObject("team").getString("crest")
 
                 if(teamname.equals(MyTeam_Name.get(i))){
-                    //Log.d("matchlistmyteam", "successs")
                     adapter.items.add(MyTeamData(MyTeam_League.get(i), MyTeam_Name.get(i), teamimg))
                     break
                 }

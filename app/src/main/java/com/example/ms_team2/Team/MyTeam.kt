@@ -28,14 +28,11 @@ class MyTeam : AppCompatActivity() {
         setContentView(binding.root)
         League = "PL"
         init()
-        //getAllRecord()
-        //initDB()
-
+        initDB()
+        initrecycler_myteam2()
     }
 
-    fun getAllRecord(){
-        myDBHelper.getAllRecord()
-    }
+
 
     fun init() {
         myDBHelper = MyDBHelper(this)
@@ -51,13 +48,11 @@ class MyTeam : AppCompatActivity() {
                 position: Int,
                 id: Long
             ) {
-                //Log.d("selected", LeagueArray.get(position)+"선택")
                 if(position == 0){
                     League = "PL"
                 }else{
                     League = LeagueArray.get(position)
                 }
-                //Log.d("init", "here")
                 initRecycler()
             }
 
@@ -85,15 +80,9 @@ class MyTeam : AppCompatActivity() {
                     val myteam = MyTeamData(league, teamname)
                     val result = myDBHelper.insertData(myteam)
 
-                    if(result){
-                      //  getAllRecord()
-                    }
+
                 }else{  //클릭해서 false->delete
                     val result = myDBHelper.deleteData(data.teamname)
-                    Log.d("delete","delete")
-//                    if(result){
-//                        getAllRecord()
-//                    }
                 }
                 initDB()
                 initrecycler_myteam2()
@@ -109,31 +98,26 @@ class MyTeam : AppCompatActivity() {
         val team_array = standings_array.getJSONArray("table")  //team array
 
         var i=0
-        var str = ""
-
         while(i < team_array.length()){
             val teamname = team_array.getJSONObject(i).getJSONObject("team").getString("name")
             val position = team_array.getJSONObject(i).getString("position").toInt()
             val teamimg = team_array.getJSONObject(i).getJSONObject("team").getString("crest")
-            Log.d("img", teamimg)
+
             val result = myDBHelper.findProduct(teamname)
             if(result) { //존재
                 adapter.items.add(TeamData(teamname, position, teamimg, true))
             }else{
                 adapter.items.add(TeamData(teamname, position, teamimg, false))
             }
-
             i++
         }
 
-        //binding.textView.text = teamname
     }
 
     fun initDB(){
         MyTeam_League.clear()
         MyTeam_Name.clear()
 
-        //myDBHelper = MyDBHelper(this)
         val strsql = "select * from ${MyDBHelper.TABLE_NAME};"  //질의문
         Log.d("dbcursor", MyDBHelper.TABLE_NAME)
         val db = myDBHelper.readableDatabase
@@ -174,7 +158,6 @@ class MyTeam : AppCompatActivity() {
                     val teamimg = team_array.getJSONObject(j).getJSONObject("team").getString("crest")
 
                     if(teamname.equals(MyTeam_Name.get(i))){
-                        //Log.d("matchlistmyteam", "successs")
                         adapter.items.add(MyTeamData(MyTeam_League.get(i), MyTeam_Name.get(i), teamimg))
                         break
                     }
@@ -183,8 +166,7 @@ class MyTeam : AppCompatActivity() {
                 }
             }
         }else{
-            Log.d("myteamelse","즐찾팀없")
-            Toast.makeText(this, "줄겨찾기 팀이 없습니다", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "줄겨찾기 팀이 없습니다", Toast.LENGTH_SHORT).show()
         }
 
 
