@@ -28,7 +28,6 @@ class MatchList : AppCompatActivity() {
         //Season = "2021"
         Month = "00"
 
-        init()
         SelectLeague()
         SelectMonth()
 
@@ -45,19 +44,11 @@ class MatchList : AppCompatActivity() {
 
     }
 
-    fun init() {
-        Log.d("taga", "init")
-//        binding.MyTeambtn.setOnClickListener {
-//            val intent = Intent(this, TeamListActivity::class.java)
-//            startActivity(intent)
-//        }
 
-        //val filename = "Team_"+League+".json"
-    }
 
     fun SelectLeague(){     //리그 선택
         Log.d("taga", "select")
-        var LeagueArray = listOf("PL", "BL1", "WC")
+        var LeagueArray = listOf("BL1","BSA","CL","CLI","DED","ELC","FL1","PD", "PL","PPL","SA","WC")
         var Leagueadapter = ArrayAdapter<String>(this,
             com.google.android.material.R.layout.support_simple_spinner_dropdown_item, LeagueArray)
         binding.leagueSpinner.adapter = Leagueadapter
@@ -70,8 +61,6 @@ class MatchList : AppCompatActivity() {
             ) {
                 Log.d("selected", LeagueArray.get(position)+"선택")
                 League = LeagueArray.get(position)
-                //Month = "00"    //리그 바꾸면 월 초기화
-                // init()
                 SelectMonth()
                 initRecycler()
             }
@@ -89,7 +78,6 @@ class MatchList : AppCompatActivity() {
         val jsonObject = JSONObject(jsonString).getJSONObject("resultSet")
         var startmonth = jsonObject.getString("first").substring(5 until 7).toInt()
         var endmonth = jsonObject.getString("last").substring(5 until 7).toInt()
-        //Log.d("check", startmonth)
 
         var diff = endmonth - startmonth
         var loop:Int
@@ -110,7 +98,6 @@ class MatchList : AppCompatActivity() {
                 MonthArray.add("0"+startmonth.toString())
             else
                 MonthArray.add(startmonth.toString())
-            Log.d("check", "$i $startmonth")
             startmonth++
         }
 
@@ -135,19 +122,11 @@ class MatchList : AppCompatActivity() {
         }
     }
 
-
-    // }
     fun initRecycler() {
 
         binding.recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
         adapter = ScheAdapter(ArrayList<ScheData>())
-
-//        adapter.itemClickListener = object: MyAdapter.OnItemClickListener{
-//            override fun OnItemClick(data: MyData) {
-//
-//            }
-//        }
 
         binding.recyclerView.adapter = adapter
         val filename = "Match_"+League+".json"
@@ -157,11 +136,7 @@ class MatchList : AppCompatActivity() {
         val jsonObject = JSONObject(jsonString)
         val match_array = jsonObject.getJSONArray("matches")
 
-        // val team_array = standings_array.getJSONArray("table")  //team array
-        //val matchcnt = match_array.length()
         var i=0
-        var str = ""
-
         while(i< match_array.length()){
             val match_id = match_array.getJSONObject(i).getString("id")
 
