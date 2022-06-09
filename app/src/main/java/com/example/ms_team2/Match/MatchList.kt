@@ -1,4 +1,4 @@
-package com.example.ms_team2
+package com.example.ms_team2.Match
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,11 +7,8 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.bumptech.glide.Glide.init
-import com.example.ms_team2.databinding.ActivityMainBinding
 import com.example.ms_team2.databinding.ActivityMatchListBinding
 import org.json.JSONObject
-import java.time.Month
 
 
 class MatchList : AppCompatActivity() {
@@ -23,7 +20,6 @@ class MatchList : AppCompatActivity() {
     lateinit var Month : String
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        Log.d("taga", "matchlist")
         super.onCreate(savedInstanceState)
         binding = ActivityMatchListBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -35,6 +31,11 @@ class MatchList : AppCompatActivity() {
         init()
         SelectLeague()
         SelectMonth()
+
+        binding.matchlistMyTeam.setOnClickListener {
+            val intent = Intent(this, MatchListMyTeam::class.java)
+            startActivity(intent)
+        }
 
         //Back 버튼
 //        btnBack.setOnClickListener {
@@ -162,6 +163,8 @@ class MatchList : AppCompatActivity() {
         var str = ""
 
         while(i< match_array.length()){
+            val match_id = match_array.getJSONObject(i).getString("id")
+
             val hometeam = match_array.getJSONObject(i).getJSONObject("homeTeam")
             val hometeamname = hometeam.getString("shortName")
             val hometeamimg = hometeam.getString("crest")
@@ -178,11 +181,11 @@ class MatchList : AppCompatActivity() {
 
             //추가
             if(Month == "00"){   //아무것도 선택 X-> 다보여줌
-                adapter.items.add(ScheData(hometeamname, hometeamimg, awayteamname, awayteamimg, match_date, match_time))
+                adapter.items.add(ScheData(hometeamname, hometeamimg, awayteamname, awayteamimg, match_date, match_time, match_id))
             }
             else{   //월 선택 -> 해당 월만 보여줌
                 if(str_match_date.get(1).toString() == Month){
-                    adapter.items.add(ScheData(hometeamname, hometeamimg, awayteamname, awayteamimg, match_date, match_time))
+                    adapter.items.add(ScheData(hometeamname, hometeamimg, awayteamname, awayteamimg, match_date, match_time, match_id))
                 }
             }
 

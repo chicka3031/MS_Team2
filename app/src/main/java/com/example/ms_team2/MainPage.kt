@@ -5,6 +5,8 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.example.ms_team2.Match.MatchList
+import com.example.ms_team2.Team.MyTeam
 import kotlinx.android.synthetic.main.activity_mainpage.*
 
 class MainPage : AppCompatActivity() {

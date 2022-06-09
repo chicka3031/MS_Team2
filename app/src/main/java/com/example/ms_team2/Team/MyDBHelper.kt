@@ -1,4 +1,4 @@
-package com.example.ms_team2
+package com.example.ms_team2.Team
 
 import android.content.ContentValues
 import android.content.Context
@@ -8,7 +8,6 @@ import android.database.sqlite.SQLiteOpenHelper
 import android.graphics.Color
 import android.util.Log
 import android.view.Gravity
-import android.widget.TableLayout
 import android.widget.TableRow
 import android.widget.TextView
 
@@ -33,56 +32,55 @@ class MyDBHelper(val context: Context): SQLiteOpenHelper(context, DB_NAME, null,
     }
 
     private fun showRecord(cursor: Cursor) {
-        cursor.moveToFirst()
-        val attrcount = cursor.columnCount
-        val activity = context as MyTeam  //TeamListActivity 멤버 접근 가능해짐
-        activity.binding.tableLayout.removeAllViewsInLayout()   //테이블레이아웃의 모든 뷰를 지우겠다.
-
-        //타이틀 만들기
-        val tablerow = TableRow(activity)
-        val rowParam = TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT)  //레이아웃의 파라미터 설정
-        tablerow.layoutParams = rowParam
-        val viewParam = TableRow.LayoutParams(0, 100, 1f)
-        for(i in 0 until attrcount){
-            val textView = TextView(activity)
-            textView.layoutParams = viewParam
-            textView.text = cursor.getColumnName(i)
-            textView.setBackgroundColor(Color.LTGRAY)
-            textView.textSize = 15.0f
-            textView.gravity = Gravity.CENTER
-            tablerow.addView(textView)
-        }
-        activity.binding.tableLayout.addView(tablerow)
-        if(cursor.count==0) return  //여기서 멈춤, 레코드 추가X
-        // 레코드 추가
-        do {
-            val row = TableRow(activity)
-            row.layoutParams = rowParam
-            row.setOnClickListener{
-                for(i in 0 until attrcount){
-                    val textView = row.getChildAt(i) as TextView
-                   // Log.d("rowclick", textView)
-                    when(textView.tag){
-                        2->{
-                            Log.d("rowclick", textView.text.toString())
-                            deleteData(textView.text.toString())
-                            getAllRecord()
-                        }
-                    }
-                }
-            }
-            for(i in 0 until attrcount){
-                val textView = TextView(activity)
-                textView.tag = i //view 식별
-                textView.layoutParams = viewParam
-                textView.text = cursor.getString(i)
-                textView.textSize = 13.0f
-                textView.gravity = Gravity.CENTER
-                row.addView(textView)
-            }
-            //Log.d("attc", attrcount.toString())   //attrcount = 3
-            activity.binding.tableLayout.addView(row)  //추가
-        }while(cursor.moveToNext()) //다음이 있으면 반복
+//        cursor.moveToFirst()
+//        val attrcount = cursor.columnCount
+//        val activity = context as MyTeam  //TeamListActivity 멤버 접근 가능해짐
+//        activity.binding.tableLayout.removeAllViewsInLayout()   //테이블레이아웃의 모든 뷰를 지우겠다.
+//
+//        //타이틀 만들기
+//        val tablerow = TableRow(activity)
+//        val rowParam = TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT)  //레이아웃의 파라미터 설정
+//        tablerow.layoutParams = rowParam
+//        val viewParam = TableRow.LayoutParams(0, 100, 1f)
+//        for(i in 0 until attrcount){
+//            val textView = TextView(activity)
+//            textView.layoutParams = viewParam
+//            textView.text = cursor.getColumnName(i)
+//            textView.setBackgroundColor(Color.LTGRAY)
+//            textView.textSize = 15.0f
+//            textView.gravity = Gravity.CENTER
+//            tablerow.addView(textView)
+//        }
+//        activity.binding.tableLayout.addView(tablerow)
+//        if(cursor.count==0) return  //여기서 멈춤, 레코드 추가X
+//        // 레코드 추가
+//        do {
+//            val row = TableRow(activity)
+//            row.layoutParams = rowParam
+//            row.setOnClickListener{
+//                for(i in 0 until attrcount){
+//                    val textView = row.getChildAt(i) as TextView
+//                   // Log.d("rowclick", textView)
+//                    when(textView.tag){
+//                        2->{
+//                            Log.d("rowclick", textView.text.toString())
+//                            deleteData(textView.text.toString())
+//                            getAllRecord()
+//                        }
+//                    }
+//                }
+//            }
+//            for(i in 0 until attrcount){
+//                val textView = TextView(activity)
+//                textView.tag = i //view 식별
+//                textView.layoutParams = viewParam
+//                textView.text = cursor.getString(i)
+//                textView.textSize = 13.0f
+//                textView.gravity = Gravity.CENTER
+//                row.addView(textView)
+//            }
+//            activity.binding.tableLayout.addView(row)  //추가
+//        }while(cursor.moveToNext()) //다음이 있으면 반복
     }
 
     fun insertData(myteam: MyTeamData):Boolean{

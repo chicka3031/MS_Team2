@@ -1,12 +1,10 @@
-package com.example.ms_team2
+package com.example.ms_team2.Match
 
-import android.app.Activity
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.ms_team2.databinding.MainrowBinding
+import com.example.ms_team2.databinding.MatchrowBinding
 
 
 class ScheAdapter(val items:ArrayList<ScheData>) : RecyclerView.Adapter<ScheAdapter.ViewHolder>() {
@@ -14,9 +12,9 @@ class ScheAdapter(val items:ArrayList<ScheData>) : RecyclerView.Adapter<ScheAdap
     interface OnItemClickListener{
         fun OnItemClick(data: ScheData)
     }
-    var itemClickListener:OnItemClickListener?=null
+    var itemClickListener: OnItemClickListener?=null
 
-    inner class ViewHolder(val binding: MainrowBinding): RecyclerView.ViewHolder(binding.root){
+    inner class ViewHolder(val binding: MatchrowBinding): RecyclerView.ViewHolder(binding.root){
         init{
             binding.root.setOnClickListener{
                 itemClickListener?.OnItemClick(items[adapterPosition])
@@ -28,7 +26,7 @@ class ScheAdapter(val items:ArrayList<ScheData>) : RecyclerView.Adapter<ScheAdap
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = MainrowBinding.inflate(LayoutInflater.from(parent.context), parent,false)
+        val view = MatchrowBinding.inflate(LayoutInflater.from(parent.context), parent,false)
         return ViewHolder(view)
     }
 
@@ -43,7 +41,7 @@ class ScheAdapter(val items:ArrayList<ScheData>) : RecyclerView.Adapter<ScheAdap
             Glide.with(root).load(items[position].awayteamimg)
                 .override(150, 150).into(awayteamImg)
 
-            //Log.d("glide", items[position].hometeamimg)
+
 
         }
     }

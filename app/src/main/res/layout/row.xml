@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/teamImg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
         tools:srcCompat="@tools:sample/avatars"
         android:adjustViewBounds="true"/>
     <TextView

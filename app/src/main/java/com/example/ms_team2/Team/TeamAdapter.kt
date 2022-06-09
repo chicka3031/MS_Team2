@@ -1,12 +1,11 @@
-package com.example.ms_team2
+package com.example.ms_team2.Team
 
-import android.net.Uri
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.graphics.drawable.toDrawable
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.ms_team2.R
 import com.example.ms_team2.databinding.RowBinding
 
 class TeamAdapter(val items:ArrayList<TeamData>) : RecyclerView.Adapter<TeamAdapter.ViewHolder>() {
@@ -14,7 +13,7 @@ class TeamAdapter(val items:ArrayList<TeamData>) : RecyclerView.Adapter<TeamAdap
     interface OnItemClickListener{
         fun OnItemClick(data: TeamData)
     }
-    var itemClickListener:OnItemClickListener?=null
+    var itemClickListener: OnItemClickListener?=null
 
     inner class ViewHolder(val binding: RowBinding): RecyclerView.ViewHolder(binding.root){
         init{
@@ -55,6 +54,8 @@ class TeamAdapter(val items:ArrayList<TeamData>) : RecyclerView.Adapter<TeamAdap
 
             Glide.with(root).load(items[position].teamimg)
                 .override(150, 150).into(teamImg)
+
+            //GlideToVectorYou.justLoadImage(this, Uri.parse(svgUrl), findViewById(R.id.imageview))
 
             Log.d("bindview", items[position].teamname)
             if(items[position].isSelected){
