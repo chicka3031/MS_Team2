@@ -5,15 +5,29 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ms_team2.Match.MatchList
 import com.example.ms_team2.Team.MyTeam
+import com.example.ms_team2.databinding.ActivityMainBinding
+import com.example.ms_team2.databinding.ActivityMainpageBinding
 import kotlinx.android.synthetic.main.activity_mainpage.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import org.jsoup.Jsoup
 
 class MainPage : AppCompatActivity() {
+    lateinit var binding: ActivityMainpageBinding
+    lateinit var adapter: ArticleAdapter
+    var newsurl = "https://sports.news.naver.com/wfootball/news/index?isphoto=N"
+    val scope = CoroutineScope(Dispatchers.IO)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_mainpage)
-Log.d("taga", "mainpage")
+        binding = ActivityMainpageBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
         //MyTeam 버튼
         btnMyTeam.setOnClickListener {
             val intent = Intent(this, MyTeam::class.java)
@@ -32,12 +46,6 @@ Log.d("taga", "mainpage")
             startActivity(intent)
         }
 
-        //Predict 버튼
-        btnPredict.setOnClickListener {
-            val intent = Intent(this, Predict::class.java)
-            startActivity(intent)
-        }
-
         //Video 버튼
         btnVideo.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/c/SPOTV오리지널"))
@@ -49,5 +57,30 @@ Log.d("taga", "mainpage")
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://sports.news.naver.com/wfootball/index"))
             startActivity(intent)
         }
+        getNews()
+    }
+
+    fun getNews(){
+        binding.ArticleRecycler.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        adapter = ArticleAdapter(ArrayList<ArticleData>())
+
+
+        scope.launch {
+            adapter.items.clear()
+            val doc = Jsoup.connect(newsurl).get()
+            Log.d("doc", doc.toString())
+            val headlines = doc.select("ul.aside_news_list>li>a>span")
+            Log.d("healines", headlines.toString())
+
+            for(headline in headlines){
+                adapter.items.add(ArticleData(headline.text()))
+                Log.d("ihi", headline.text())
+
+            }
+            withContext(Dispatchers.Main){
+                adapter.notifyDataSetChanged()
+            }
+        }
+        binding.ArticleRecycler.adapter = adapter
     }
 }

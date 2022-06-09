@@ -16,7 +16,6 @@ class MatchList : AppCompatActivity() {
     lateinit var adapter: ScheAdapter
 
     lateinit var League : String
-    //lateinit var Season : String
     lateinit var Month : String
 
     override fun onCreate(savedInstanceState: Bundle?) {
