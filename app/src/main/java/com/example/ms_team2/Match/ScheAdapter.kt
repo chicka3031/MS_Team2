@@ -1,5 +1,6 @@
 package com.example.ms_team2.Match
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -17,7 +18,18 @@ class ScheAdapter(val items:ArrayList<ScheData>) : RecyclerView.Adapter<ScheAdap
     inner class ViewHolder(val binding: MatchrowBinding): RecyclerView.ViewHolder(binding.root){
         init{
             binding.root.setOnClickListener{
-                itemClickListener?.OnItemClick(items[adapterPosition])
+//                itemClickListener?.OnItemClick(items[adapterPosition])
+                val scheData = items[adapterPosition]
+
+                val intent = Intent(binding.root.context, UserCountActivity::class.java)
+                intent.putExtra("hometeam",scheData.hometeam)
+                intent.putExtra("awayteam",scheData.awayteam)
+                intent.putExtra("match_date",scheData.match_date)
+                intent.putExtra("match_time",scheData.match_time)
+                intent.putExtra("hometeamimg",scheData.hometeamimg)
+                intent.putExtra("awayteamimg",scheData.awayteamimg)
+                binding.root.context.startActivity(intent)
+
             }
            // Log.d("urlimg",items[adapterPosition].hometeamimg)
 
