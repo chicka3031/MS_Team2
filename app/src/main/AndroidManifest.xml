@@ -20,9 +20,6 @@
             android:name=".Match.MatchListMyTeam"
             android:exported="false" />
         <activity
-            android:name=".Predict"
-            android:exported="false" />
-        <activity
             android:name=".Chatting"
             android:exported="false" />
         <activity

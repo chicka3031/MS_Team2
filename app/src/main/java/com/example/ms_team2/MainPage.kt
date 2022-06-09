@@ -32,12 +32,6 @@ Log.d("taga", "mainpage")
             startActivity(intent)
         }
 
-        //Predict 버튼
-        btnPredict.setOnClickListener {
-            val intent = Intent(this, Predict::class.java)
-            startActivity(intent)
-        }
-
         //Video 버튼
         btnVideo.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/c/SPOTV오리지널"))
