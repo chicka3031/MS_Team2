@@ -4,10 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../../layout/custom_preview.xml" value="0.2520833333333333" />
+        <entry key="..\:/Users/MPG/Documents/MouseSoccer_Main/app/src/main/res/layout/activity_main.xml" value="0.1875" />
+        <entry key="..\:/Users/MPG/Documents/MouseSoccer_Main/app/src/main/res/layout/activity_mainpage.xml" value="0.1875" />
+        <entry key="..\:/Users/MPG/Documents/MouseSoccer_Main/app/src/main/res/layout/activity_predict.xml" value="0.1875" />
         <entry key="..\:/Users/shon1/AndroidStudioProjects/MS_Team2.2/app/src/main/res/drawable/ic_baseline_star_24.xml" value="0.1" />
-        <entry key="..\:/Users/shon1/AndroidStudioProjects/MS_Team2.2/app/src/main/res/layout/acticle_row.xml" value="0.1" />
         <entry key="..\:/Users/shon1/AndroidStudioProjects/MS_Team2.2/app/src/main/res/layout/activity_main.xml" value="0.16742654508611957" />
-        <entry key="..\:/Users/shon1/AndroidStudioProjects/MS_Team2.2/app/src/main/res/layout/activity_mainpage.xml" value="0.22" />
+        <entry key="..\:/Users/shon1/AndroidStudioProjects/MS_Team2.2/app/src/main/res/layout/activity_mainpage.xml" value="0.1" />
         <entry key="..\:/Users/shon1/AndroidStudioProjects/MS_Team2.2/app/src/main/res/layout/activity_match_list.xml" value="0.143646408839779" />
         <entry key="..\:/Users/shon1/AndroidStudioProjects/MS_Team2.2/app/src/main/res/layout/activity_match_list_my_team.xml" value="0.1" />
         <entry key="..\:/Users/shon1/AndroidStudioProjects/MS_Team2.2/app/src/main/res/layout/activity_matchlist.xml" value="0.16742654508611957" />
@@ -29,7 +31,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
