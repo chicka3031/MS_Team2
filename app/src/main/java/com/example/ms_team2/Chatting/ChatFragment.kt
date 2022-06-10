@@ -1,4 +1,4 @@
-package com.example.chatting
+package com.example.ms_team2.Chatting
 
 import android.os.Bundle
 import android.util.Log

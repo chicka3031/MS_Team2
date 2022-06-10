@@ -1,4 +1,4 @@
-package com.example.chatting
+package com.example.ms_team2.Chatting
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
-import com.example.ms_team2.Chatting
 import com.example.ms_team2.databinding.FragmentLoginBinding
 
 class LoginFragment: Fragment() {

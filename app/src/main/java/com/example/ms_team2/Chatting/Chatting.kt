@@ -1,13 +1,12 @@
-package com.example.ms_team2
+package com.example.ms_team2.Chatting
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.chatting.ChatFragment
-import com.example.chatting.LoginFragment
+import com.example.ms_team2.Main.MainPage
+import com.example.ms_team2.R
 import com.example.ms_team2.databinding.ActivityChattingBinding
 import kotlinx.android.synthetic.main.activity_chatting.*
-import kotlinx.android.synthetic.main.activity_mainpage.*
 
 class Chatting : AppCompatActivity() {
     private lateinit var binding : ActivityChattingBinding
