@@ -13,9 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar" >
         <activity
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity
             android:name=".Match.UserCountActivity"
             android:exported="false" />
         <activity
@@ -29,9 +26,6 @@
             android:exported="false" />
         <activity
             android:name=".Team.MyTeam"
-            android:exported="false" />
-        <activity
-            android:name=".Match.MatchListMyTeam"
             android:exported="false" />
         <activity
             android:name=".MainPage"
